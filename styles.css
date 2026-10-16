@@ -1,0 +1,149 @@
+:root {
+  --bg: #05070c;
+  --surface: #0c1018;
+  --text: #f2f5fa;
+  --muted: #9aa6b8;
+  --accent: #007ffd;
+  --line: rgba(255, 255, 255, 0.08);
+  --max: 44rem;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, rgba(0, 127, 253, 0.18), transparent 55%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { color: #4da3ff; }
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(10px);
+  background: rgba(5, 7, 12, 0.85);
+  z-index: 2;
+}
+
+.brand {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.1rem;
+  font-size: 0.92rem;
+}
+
+.hero, .doc {
+  width: min(var(--max), calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2.5rem 0 3.5rem;
+}
+
+.eyebrow {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  margin: 0 0 0.75rem;
+}
+
+h1 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0 0 0.85rem;
+  font-weight: 750;
+}
+
+.lede {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin: 0 0 1.75rem;
+  max-width: 36rem;
+}
+
+.card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.card-list a {
+  display: block;
+  padding: 1rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.card-list a:hover {
+  border-color: rgba(0, 127, 253, 0.45);
+}
+
+.doc h2 {
+  margin: 2rem 0 0.65rem;
+  font-size: 1.15rem;
+}
+
+.doc p, .doc li {
+  color: #d5dce8;
+}
+
+.doc ul {
+  padding-left: 1.2rem;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 1.25rem;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+code {
+  font-size: 0.85em;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+
+.cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  background: var(--accent);
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 650;
+}
